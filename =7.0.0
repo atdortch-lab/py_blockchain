@@ -1,0 +1,4 @@
+Requirement already satisfied: pubnub in /home/atdortch/.local/lib/python3.8/site-packages (4.1.6)
+Requirement already satisfied: pycryptodomex>=3.3 in /home/atdortch/.local/lib/python3.8/site-packages (from pubnub) (3.22.0)
+Requirement already satisfied: requests>=2.4 in /usr/lib/python3/dist-packages (from pubnub) (2.22.0)
+Requirement already satisfied: six>=1.10 in /usr/lib/python3/dist-packages (from pubnub) (1.14.0)

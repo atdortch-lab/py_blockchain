@@ -1,12 +1,11 @@
-from flask import Flask, jsonify
+from flask import Flask,jsonify
 
 from backend.blockchain.blockchain import Blockchain
+from backend.pubsub import PubSub
 
 app = Flask(__name__)
 blockchain = Blockchain()
-
-for i in range(3):
-    blockchain.add_block(i)
+pubsub = PubSub()
 
 @app.route('/')
 def route_default():
@@ -15,6 +14,16 @@ def route_default():
 @app.route('/blockchain')
 def route_blockchain():
     return jsonify(blockchain.to_json())
+
+@app.route('/blockchain/mine')
+def route_blockchain_mine():
+    transaction_data = 'stubbed_transaction_data'
+
+    blockchain.add_block(transaction_data)
+
+    blockchain.chain[-1].to_json()
+
+    return jsonify(blockchain.chain[-1].to_json())
 
 app.run()
 
