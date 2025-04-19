@@ -51,7 +51,7 @@ class Block:
     @staticmethod
     def mine_block(last_block, data):
         """""
-        Mine a block on the give last_block and data, util a block hash
+        Mine a block on the given last_block and data, until a block hash
         is found that meets the leading 0's proof of work requirement.
         """""
         timestamp = time.time_ns()
@@ -82,6 +82,13 @@ class Block:
         )
         """""
         return Block(**GENESIS_DATA)
+    
+    @staticmethod
+    def from_json(block_json):
+        """
+        Deserialize a block's json representation back into a block instance.
+        """
+        return Block(**block_json)
     
     @staticmethod
     def adjust_difficulty(last_block, new_timestamp):
