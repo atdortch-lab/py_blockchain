@@ -1,3 +1,6 @@
+"""
+Wallet
+"""
 import uuid
 from backend.config import STARTING_BALANCE
 from cryptography.hazmat.backends import default_backend
