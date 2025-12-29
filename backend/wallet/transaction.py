@@ -31,7 +31,7 @@ class Transaction:
     
     def create_input(self, sender_wallet, output):
         '''
-        Structur the input data for the transaction.
+        Structure the input data for the transaction.
         Sign the transaction and include the sender's public key and address
         '''
 

@@ -1,4 +1,4 @@
-#!/home/atdortch/repos/py_blockchain/blockchain-env/bin/python3
+#!/home/atdortch/repos/py_blockchain/blockchain-env/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
