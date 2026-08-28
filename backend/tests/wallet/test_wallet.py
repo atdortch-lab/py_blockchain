@@ -5,7 +5,7 @@ def test_verify_valid_signature():
     wallet = Wallet()
     signature = wallet.sign(data)
 
-    assert Wallet.verify(wallet.pubic_key, data, signature)
+    assert Wallet.verify(wallet.public_key, data, signature)
 
 def test_verify_invalid_signature():
     data = {'foo': 'test_data'}

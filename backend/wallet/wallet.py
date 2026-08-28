@@ -23,10 +23,10 @@ class Wallet:
     
     def sign(self, data):
         '''
-        Generate a signtarue based on the data using the local
+        Generate a signature based on the data using the local
         private key.
         '''
-        self.private_key.sign(
+        return self.private_key.sign(
             json.dumps(data).encode('utf-8'),
             ec.ECDSA(hashes.SHA256())
             )
